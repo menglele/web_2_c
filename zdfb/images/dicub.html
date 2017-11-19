@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>商品评分</title>
+    <meta charset="utf-8">
+	<style type="text/css">
+		#first{
+			border: 1px ;
+			width: 700px;
+			height: 500px;
+			position: absolute;
+			left: 300px;
+			top:50px;
+		}
+		#f_f{
+			border: 1px;
+			width: 500px;
+			height: 50px;
+			position: relative;
+			left: 30px;
+			top: 20px;
+			background-image: url(images/bg.jpg);
+		
+
+		}
+		#f_s{
+			border: 1px ;
+			width: 500px;
+			height: 50px;
+			position: relative;
+			left: 30px;
+			top:20px;
+			float: left;
+		}
+		   .img1 {
+        position:relative;
+        top:15px;
+        float: left;
+     
+    }
+		#f_t{
+			border: 1px ;
+			width: 500px;
+			height: 300px;
+			position: relative;
+			left: 30px;
+			top: 30px;
+			float: left;
+		}
+		#f_t_f{
+			border: 1px ;
+			width: 100px;
+			height: 30px;
+			position: relative;
+			
+			right: 20px;
+			float: right;
+		}
+	</style>
+</head>
+<body >
+	<div id="first" >
+		<div id="f_f">
+			<h2>宝贝与描述相符(打分匿名)</h2>
+		</div>
+		<div id="f_s">
+			<img id="pic1" class="img1" src="star0.png" onmouseover="pic1()" onmouseout="pic0()" onclick="qd1()">
+			<img id="pic2" class="img1" src="star0.png"  onmouseover="pic2()" onmouseout="pic0()"  onclick="qd2()">
+			<img id="pic3" class="img1" src="star0.png"  onmouseover="pic3()" onmouseout="pic0()"  onclick="qd3()">
+			<img id="pic4" class="img1" src="star0.png"  onmouseover="pic4()" onmouseout="pic0()"  onclick="qd4()">
+			<img id="pic5" class="img1" src="star0.png"  onmouseover="pic5()" onmouseout="pic0()"  onclick="qd5()">
+		</div>
+		<div id="f_t">
+			<textarea style="width: 433px;height: 200px;resize: none;" value="0" id="wb" ></textarea>
+			<br/>
+			<div id="f_t_f">
+			<input  type="button" value="公开评论" onclick="shuru2()" >
+			<img src="sanjiao.png">
+			</div>
+		</div>
+	</div>
+</body>
+    
+    <script type="text/javascript">
+    	var con=0;
+    		function pic0(){
+    			if (con==0){
+    			document.getElementById('pic1').src="star0.png";
+    			document.getElementById('pic2').src="star0.png";
+    			document.getElementById('pic3').src="star0.png";
+    			document.getElementById('pic4').src="star0.png";
+    			document.getElementById('pic5').src="star0.png";
+    			document.getElementById('wb').value=" ";
+    			}
+    		}
+    		function pic1() {
+    			if (con==0){
+    			document.getElementById('pic1').src="star1.png";
+    			document.getElementById('wb').value="完全不相符！！";
+    			}
+    		}
+    		function pic2(){
+    			if (con==0){
+    			document.getElementById('pic1').src="star1.png";
+    			document.getElementById('pic2').src="star1.png";
+    			document.getElementById('wb').value="有一些相符。";
+    			}
+    		}
+    		function pic3() {
+    			if (con==0){
+    			document.getElementById('pic1').src="star2.png";
+    			document.getElementById('pic2').src="star2.png";
+    			document.getElementById('pic3').src="star2.png";
+    			document.getElementById('wb').value="一般。";
+    			}
+    		}
+    		function pic4() {
+    			if (con==0){
+    			document.getElementById('pic1').src="star2.png";
+    			document.getElementById('pic2').src="star2.png";
+    			document.getElementById('pic3').src="star2.png";
+    			document.getElementById('pic4').src="star2.png";
+    			document.getElementById('wb').value="比较相符。";
+    			}
+    		}
+    		function pic5() {
+    			if (con==0){
+    			document.getElementById('pic1').src="star2.png";
+    			document.getElementById('pic2').src="star2.png";
+    			document.getElementById('pic3').src="star2.png";
+    			document.getElementById('pic4').src="star2.png";
+    			document.getElementById('pic5').src="star2.png";
+    			document.getElementById('wb').value="完全相符！！";
+    			}
+    		}
+    		function qd(){
+    			con=1;
+    		}
+    		function qd1(){
+    			qd();
+    			pic1();
+    		}
+    		function qd2(){
+    			qd();
+    			pic1();
+    			pic2();
+    		}
+    		function qd3(){
+    			qd();
+    			pic1();
+    			pic2();
+    			pic3();
+    		}
+    		function qd4(){
+    			qd();
+    			pic1();
+    			pic2();
+    			pic3();
+    			pic4();
+
+    		}
+    		function qd5(){
+    			qd();
+    			pic1();
+    			pic2();
+    			pic3();
+    			pic4();
+    			pic5();
+    		}
+    		
+    		function shuru2(){
+    			var zj=document.getElementById('wb').value;
+    			console.log("您的评价是："+zj+"     "+"评价成功!!!!");
+    			alert("您的评价是："+zj+"     "+"评价成功!!!!");
+    		}
+    </script>
+</html>
