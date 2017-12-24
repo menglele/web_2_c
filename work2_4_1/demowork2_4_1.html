@@ -1,0 +1,87 @@
+﻿<html>
+<head>
+	<title>用户注册</title>
+	<script src="js/jquery-3.2.1.min.js" ></script>
+</head>
+<body>
+<table border="0" cellspacing="0" >
+	
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户名:</td>
+		<td><input type="text" name="username" id="ipt1" value=''><span id="errortip1"></span></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码:</td>
+		<td><input type="password" name="password1" id="ipt2" value=''><span id="errortip2"></td>
+	</tr>
+	<tr>
+		<td>确认密码:</td>
+		<td><input type="password" name="password2" id="ipt3" value=''><span id="errortip3"></td>
+	</tr>
+	<tr>
+		<td colspan="2" > <input type="button" name="" value="注册" id="tj"></td>
+	</tr>
+</table>
+</body>
+<script>
+$(document).ready(function(){
+	
+	
+	
+
+	var $error3=$('<span>密码不相同</span>');
+	$('#ipt1').focus();
+	$("#ipt1").blur(function(){
+	var $username = $('input[name="username"]');
+	var $oldspan1=$('#errortip1');
+		var ipv=$('#ipt1').get(0).value;
+
+		if(ipv=='')
+		{
+		if($oldspan1.length>0){$('#errortip1').remove();}
+		var $error1=$('<span id="errortip1">用户名不能为空</span>');
+		$("#ipt1").after($error1);
+		}
+		else
+		{
+		if($oldspan1.length>0){$('#errortip1').remove();}
+		}
+	});
+	$("#ipt2").blur(function(){
+	
+	var $pswd1=$('input[name="password1"]');
+	var $oldspan2=$('#errortip2');
+		var ipv=$('#ipt2').get(0).value;
+
+		if(ipv=='')
+		{
+		if($oldspan2.length>0){$('#errortip2').remove();}
+		var $error2=$('<span id="errortip2">密码不能为空</span>');
+		$("#ipt2").after($error2);
+		}
+		else
+		{
+		if($oldspan2.length>0){$('#errortip2').remove();}
+		}
+	});
+	$("#ipt3").blur(function(){
+	
+	var $pswd2=$('input[name="password2"]');
+	var $oldspan3=$('#errortip3');
+		var ipv=$('#ipt2').get(0).value;
+		var ipv2=$('#ipt3').get(0).value;
+
+		if(ipv2!=ipv)
+		{
+		if($oldspan3.length>0){$('#errortip3').remove();}
+		var $error3=$('<span id="errortip3">密码不相同</span>');
+		$("#ipt3").after($error3);
+		}
+		else
+		{
+		if($oldspan3.length>0){$('#errortip3').remove();}
+		}
+	});
+});
+</script>
+</html>
