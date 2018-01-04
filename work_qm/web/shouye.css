@@ -1,0 +1,116 @@
+a:link{text-decoration: none;}
+a:visited{color: black;}
+a:hover{text-decoration: underline;color: #5cacee;}
+a:active{color: #ff0000;}
+	#up1{
+		margin: auto;
+		height: 100px;
+		border: ;
+
+	}
+	#up2{
+		margin: auto;
+		height: 500px;
+
+		border: ;
+	}
+	#up3{
+		margin: auto;
+		height: 500px;
+
+		border: ;
+	}
+	#up1_1{
+		margin: auto;
+		height: 100px;
+		border: ;
+		background-color:#a5d3ee;
+	}
+	#up1_1_1{
+
+		height: 30px;
+		width: 700px;
+        position: relative;
+        left: 390px;
+        top: 30px;
+        font-size: 1.5em;
+	}
+	#xl1{
+		display: none;
+		height: 100px;
+		width: 99px;
+		font-size: 0.7em;
+		position: absolute;
+		left:-19px;
+		top: 39px;
+	}
+	#xl2{
+		display: none;
+		height: 100px;
+		width: 99px;
+		font-size: 0.7em;
+		position: absolute;
+		left:93px;
+		top: 39px;
+	}
+	#xl3{
+		display: none;
+		height: 100px;
+		width: 99px;
+		font-size: 0.7em;
+		position: absolute;
+		left:210px;
+		top: 39px;
+	}
+	#xl4{
+		display: none;
+		height: 100px;
+		width: 99px;
+		font-size: 0.7em;
+		position: absolute;
+		left:340px;
+		top: 39px;
+	}
+	#xl5{
+		display: none;
+		height: 100px;
+		width: 99px;
+		font-size: 0.7em;
+		position: absolute;
+		left:470px;
+		top: 39px;
+	}
+	#picScroll{
+	margin: auto;
+	height: 500px;
+	
+	white-space: nowrap;
+	overflow: hidden;
+}
+#f_t{
+	margin: auto;
+	border: ;
+	width: 500px;
+	height: 300px;
+	position: relative;
+	left: 200px;
+	top: 0px;
+	float: left;
+	}
+#f_t_f{
+	border:;
+	width: 100px;
+	height: 30px;
+	position: relative;
+	left: 300px;
+    }
+    #tiip3{
+    	border: ;
+    	float: left;
+    	position: relative;
+    	left: 150px;
+    	top: 100px;
+    }
+			
+			
+			
